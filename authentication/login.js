@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const asyncHandler = require('express-async-handler')
+const asyncHandler = require('express-async-handler');
 
 const database = require("../database");
 const jwtToken = require('./token');
@@ -65,7 +65,6 @@ let loginApi = async (req, res) => {
                 status: 200
             })
         }
-
     }
 }
 

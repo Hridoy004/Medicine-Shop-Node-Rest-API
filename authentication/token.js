@@ -17,6 +17,18 @@ let generateToken = async (payload) => {
     });
 }
 
+let decodeToken = (token) => {
+    try {
+        let payload = jwt.verify(token, TOKEN_SECRET,  {algorithm: 'HS256'});
+        return payload;
+    } catch (e) {
+        console.log('Invalid token found');
+        console.log(e.message);
+        return null;
+    }
+
+}
+
 let getUserRoles = async (userId) => {
 
     const query = "SELECT Role FROM UserRoles where UserId=?";
@@ -43,12 +55,13 @@ let getLoggedInUserToken = async (user) => {
         Email: user.Email,
         PhoneNumber: user.PhoneNumber,
         Roles: roles,
-        iss: 'Ng-Scratch'
+        iss: 'Medicine shop'
     }
     return await generateToken(token_payload);
 }
 
 
 module.exports = {
-    getLoggedInUserToken: getLoggedInUserToken
+    getLoggedInUserToken: getLoggedInUserToken,
+    decodeToken: decodeToken
 }
