@@ -1,7 +1,7 @@
-const adminDetailsApi = require('./admin-panel');
+const usersDetailsApi = require('./users');
 
 let initUserAccessManagementModule = (app) => {
-    adminDetailsApi(app);
+    usersDetailsApi(app);
 }
 
 module.exports = (app) => {

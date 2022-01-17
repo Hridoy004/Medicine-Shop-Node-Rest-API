@@ -13,13 +13,13 @@ db.connect(err => {
     if(err) {
         console.log(err, 'dberr');
     }
-    console.log('database connected');
+
 })
 
 
-let getLoggedInAdminDataApi = async (req, res) => {
+let getLoggedInContactInfoDataApi = async (req, res) => {
 
-    let qr = `select * from admin`;
+    let qr = `select * from contact_information`;
     db.query(qr, (err, result) => {
         if(err) {
             console.log(err, 'errs');
@@ -36,12 +36,12 @@ let getLoggedInAdminDataApi = async (req, res) => {
 
 }
 
-let initAdminDetailsApi = (app) => {
-    app.get('/adminpanel', asyncHandler(getLoggedInAdminDataApi));
+let initContactInfoDetailsApi = (app) => {
+    app.get('/contactInfo', asyncHandler(getLoggedInContactInfoDataApi));
 
 }
 
-module.exports = initAdminDetailsApi;
+module.exports = initContactInfoDetailsApi;
 
 
 

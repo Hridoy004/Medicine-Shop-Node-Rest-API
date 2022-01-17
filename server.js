@@ -5,6 +5,8 @@ const checkout = require('./checkout')
 const welcomeModule = require('./welcome');
 const productModule = require('./products');
 const adminModule = require('./admin');
+const billingModule = require('./billing-address');
+const userModule = require('./users');
 const contactModule = require('./contact');
 const uamModule = require('./uam');
 const adminPanelModule = require('./adminpanel');
@@ -37,7 +39,14 @@ adminModule(app);
 // initiating contact
 contactModule(app);
 
+// initiating adminPanel
 adminPanelModule(app);
+
+// initiating adminPanel
+billingModule(app);
+
+// initiating user module
+userModule(app);
 
 app.listen(port, () => {
     console.log('Server is running at port: ', port);

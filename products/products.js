@@ -264,40 +264,10 @@ const medicines = [
             "rate": 3.6,
             "count": 145
         }
-
-    },
-
-    {
-        "id": 22,
-        "title": "JOYA SANITARY NAPKIN – BELT SYSTEM (8 PADS)",
-        "price": 12.99,
-        "description": "Indications\n" +
-            "Metformin Hydrochloride is indicated as an adjunct to diet and exercise to improve glycemic control in patients with type 2 diabetes. Metformin is also indicated for use in combination therapy with an oral hypoglycemic agent or insulin when diet and exercise does not result in adequate glycemic control.",
-        "category": "Diabetic Care",
-        "image": "https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_webp/https://emedi.com.bd/wp-content/uploads/2018/09/JOYA-SANITARY-NAPKIN-BELT-SYSTEM-8-PADS.jpg",
-        "rating": {
-            "rate": 3.6,
-            "count": 145
-        }
-
-    },
-    {
-        "id": 23,
-        "title": "SENORA SANITARY NAPKIN – PANTY SYSTEM (10 PADS)",
-        "price": 12.99,
-        "description": "Indications\n" +
-            "Metformin Hydrochloride is indicated as an adjunct to diet and exercise to improve glycemic control in patients with type 2 diabetes. Metformin is also indicated for use in combination therapy with an oral hypoglycemic agent or insulin when diet and exercise does not result in adequate glycemic control.",
-        "category": "Diabetic Care",
-        "image": "https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_webp/https://emedi.com.bd/wp-content/uploads/2018/09/SENORA-SANITARY-NAPKIN-PANTY-SYSTEM-10-PADS.jpg",
-        "rating": {
-            "rate": 3.6,
-            "count": 145
-        }
-
     }
 
-
 ]
+
 let products = (app) => {
 
     app.get('/products', (req, res) => {
